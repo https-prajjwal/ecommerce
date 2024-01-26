@@ -121,11 +121,11 @@
         $filtered_image = array_unique($_SESSION['product_image']);
         $total=0.00;
 
-  foreach($filtered_array as $row){
+    foreach($filtered_array as $row){
       $item_repeated = array_count_values($_SESSION['product_name']);
       $find_position_in_array = array_search($row,$_SESSION['product_name']);
       echo "<tr>";
-      echo '<td><img style="height: 100px;" src="./image/' . $_SESSION['product_image'][$find_position_in_array] . '" alt=""></td>';
+      echo '<td><img style="height: 100px;width: 100px;" src="./image/' . $_SESSION['product_image'][$find_position_in_array] . '" alt=""></td>';
       echo "<td>$row</td>";
       echo "<td>$item_repeated[$row]</td>";
       echo "<td> $ " . $_SESSION['product_price'][$find_position_in_array] . " CAD</td>";
